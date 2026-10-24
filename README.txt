@@ -1,22 +1,18 @@
-System Default Render Tool
+VS Tamer 5.95 is a lightweight browser extension that enhances page rendering and adds a persistent local data layer for improved viewing, filtering, and activity tracking.
 
-Overview
-
-This is a lightweight browser extension that enhances page rendering and adds a local data layer for improved viewing, filtering, and session tracking.
-
-It introduces additional metadata, simple controls, and optional tools to help organise and revisit content more efficiently.
+It introduces additional metadata, contextual controls, and optional tools to help organise and revisit content more efficiently.
 
 ⸻
 
 Installation (Chrome)
-
-1. Download or clone this folder
+1. Download and extract the v5.95 release
 2. Open Chrome and go to: chrome://extensions/
 3. Enable Developer Mode (top right)
 4. Click “Load unpacked”
-5. Select the extension folder called “v3”
+5. Select the extracted “VS Tamer 5.95” folder containing manifest.json
+The extension will then be available through the Chrome toolbar.
 
-The extension will then appear in your toolbar.
+For existing installations, replace the files in the current extension folder, click Reload, and refresh the page. Do not uninstall if retaining saved data.
 
 ⸻
 
@@ -24,109 +20,134 @@ Features
 
 Enhanced Page View
 
-Adds additional information directly into listings for easier scanning and comparison.
+Adds supplementary listing metadata for easier scanning and comparison.
 
+Includes:
+- Pricing and listing attributes
+- First and last seen timestamps
+- Related listings from the same publisher
+- Shared contact-detail previews
 ⸻
 
 Filters
 
-Basic include/exclude filters for:
-
-* Price bands
-* Selected categories
-
-Apply or clear via the popup.
+Configurable include/exclude filters for:
+- Price bands
+- Selected listing attributes
+- Entries with missing prices
+Apply or clear via the popup. Saved filter settings persist between sessions.
 
 ⸻
 
 Favourites
 
-Save and organise items into simple groups with customisable names.
+Organise saved items into customisable groups with persistent ordering and per-item data.
 
 Includes:
+- Combined multi-page favourites view
+- Custom group names
+- Group navigation shortcuts
+- Manual ordering using arrow controls
+- Notes per item
+- Saved notes displayed directly below listing controls
+- Persistent storage across refreshes and browser sessions
+⸻
 
-* Manual ordering
-* Notes per item
-* Persistent storage
+Listing Flags
+
+Manual status controls for tracking and categorising listings.
+
+Includes:
+- Contacted
+- Suspected misleading content
+- Rotating images
+- Messaging availability
+- User-marked photo status
+Flags display grey or colour states, with timestamps available on hover.
+
+Photo status is a manual reference marker and does not provide automatic image or identity verification.
 
 ⸻
 
-Favourite Image Selection (NEW)
+Favourite Image Selection
 
-Pick your preferred photo for each listing:
+Select a preferred image for each listing:
+- “Set Filter Pic” control available through the image tools
+- Choose from available listing images
+- Selection is used across filtered matches, previews, and multi-page scan results
+- Selection persists after refresh
+⸻
 
-* “Set Filter Pic” button shown under the image gallery
-* Choose from all available photos
-* Selected image is used across:
-    * Filtered Matches
-    * Previews
-    * Multi-page scan results
-* Selection is saved and stays after refresh
+Image Gallery Previews
 
+Thumbnail strips provide access to additional images without repeatedly opening individual listings.
+
+Includes:
+- Hover previews
+- Lazy-loaded gallery retrieval
+- Duplicate rendition handling
+- Cached gallery data for repeat viewing
 ⸻
 
 Reverse Image Search Tools
 
-Quickly check images using:
-
-* Google Lens
-* Yandex
-* TinEye
-
-Includes simple markers to track which images you’ve already checked.
+Open selected images using:
+- Google Lens
+- Yandex
+- TinEye
+Includes persistent markers to track previously checked images.
 
 ⸻
 
-Bulk WhatsApp Tool
+Messaging Shortcuts
 
-Select multiple listings and message them in one go:
+Contextual messaging controls available within listings.
 
-* Tick “Bulk-send WA” on listings
-* Add your message
-* Opens chats automatically
-
+Includes:
+- WhatsApp conversation links
+- Recall of the last WhatsApp message draft
+- Blank SMS draft links for compatible messaging applications
 ⸻
 
 Quick List Copy
 
-Generate a clean text list from selected items and copy to clipboard.
+Use “Copy Live List” to generate a text summary of items in the first favourites group and copy it to the clipboard.
 
 ⸻
 
 Multi-Page Scan
 
-Optional tool to scan multiple pages and display filtered results in one place.
+Optional tool to scan multiple results pages and consolidate matching listings into a single filtered view.
+
+Uses the configured filters and preferred image selections.
 
 ⸻
 
 Data Backup
 
-Export and import your local data, including:
+Export and import saved extension data, including:
+- Saved items and groups
+- Custom ordering
+- Notes
+- Filters
+- Listing flags
+- Saved settings and activity
+Existing storage keys and backup compatibility are retained.
 
-* Saved items
-* Notes
-* Filters
+Backup files may contain private notes, activity, and message drafts. They are Base64-encoded, not encrypted.
 
-Files are stored locally and can be reloaded at any time.
+⸻
 
+Version 5.95
+- Updated the manual photo marker icon
+- Removed a separate metadata badge
+- Preserved existing marker states and backup compatibility
+- Retained visible notes and existing listing controls
 ⸻
 
 Notes
-
-* Data is stored locally in your browser
-* Designed for simple personal workflow use
-* Some features depend on page structure and may vary
-
-⸻
-
-Support VS Tamer
-
-If VS Tamer is helping you save time or spot better opportunities, you can support the project via the “Support VS Tamer” popup.
-
-Just click the button in the corner, scan a QR code or copy a wallet address, and send.
-
-BTC: bc1qjzrmt6zrw7cg6m03vjxjauq48m3z8twmqefzdp
-ETH: 0x3D49E807c18e0e1cd7f684c5122f26a872196d51
-SOL: 5CGvcZ5fkCwUMMrQj9sgHESQ42Ne7TkfZyoCkK51mucp
-
-No pressure — but every contribution helps keep the tool evolving 👍
+- Extension data is primarily stored locally in Chrome
+- Legacy favourites data may also exist in Chrome sync
+- External image searches and messaging links use their respective services
+- Designed for personal browsing and organisation workflows
+- Some features depend on page structure and may vary following website updates
